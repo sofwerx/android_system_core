@@ -24,6 +24,12 @@ on early-init
     # Shouldn't be necessary, but sdcard won't start without it. http://b/22568628.
     mkdir /mnt 0775 root system
 
+    # Create directories for later bind mounts to a chroot
+    mkdir /usr 0775 root system
+    mkdir /lib 0775 root system
+    mkdir /var 0775 root system
+    mkdir /run 0775 root system
+
     # Set the security context of /postinstall if present.
     restorecon /postinstall
 
