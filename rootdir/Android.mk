@@ -144,6 +144,10 @@ endif
 LOCAL_POST_INSTALL_CMD := mkdir -p $(addprefix $(TARGET_ROOT_OUT)/, \
     sbin dev proc sys system data oem acct config storage mnt root $(BOARD_ROOT_EXTRA_FOLDERS)); \
     ln -sf /system/etc $(TARGET_ROOT_OUT)/etc; \
+    ln -sf /data/usr $(TARGET_ROOT_OUT)/usr; \
+    ln -sf /data/lib $(TARGET_ROOT_OUT)/lib; \
+    ln -sf /data/var $(TARGET_ROOT_OUT)/var; \
+    ln -sf /data/run $(TARGET_ROOT_OUT)/run; \
     ln -sf /data/user_de/0/com.android.shell/files/bugreports $(TARGET_ROOT_OUT)/bugreports; \
     ln -sf /sys/kernel/debug $(TARGET_ROOT_OUT)/d; \
     ln -sf /storage/self/primary $(TARGET_ROOT_OUT)/sdcard
