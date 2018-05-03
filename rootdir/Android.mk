@@ -151,6 +151,7 @@ LOCAL_POST_INSTALL_CMD := mkdir -p $(addprefix $(TARGET_ROOT_OUT)/, \
     ln -sf /data/bin $(TARGET_ROOT_OUT)/bin; \
     ln -sf /data/lib $(TARGET_ROOT_OUT)/lib; \
     ln -sf /data/var $(TARGET_ROOT_OUT)/var; \
+    ln -sf /data/cgroup/cpuset $(TARGET_ROOT_OUT)/cpuset; \
     mkdir -p $(TARGET_ROOT_OUT)/system/etc/; \
     ln -sf /data/etc/docker $(TARGET_ROOT_OUT)/system/etc/docker; \
     ln -sf /data/etc/resolv.conf $(TARGET_ROOT_OUT)/system/etc/resolv.conf; \
