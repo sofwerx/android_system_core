@@ -150,6 +150,7 @@ LOCAL_POST_INSTALL_CMD := mkdir -p $(addprefix $(TARGET_ROOT_OUT)/, \
     ln -sf /data/usr $(TARGET_ROOT_OUT)/usr; \
     ln -sf /data/lib $(TARGET_ROOT_OUT)/lib; \
     ln -sf /data/var $(TARGET_ROOT_OUT)/var; \
+    ln -sf /data/etc/docker $(TARGET_ROOT_OUT)/system/etc/docker; \
     ln -sf /data/run $(TARGET_ROOT_OUT)/run
 ifdef BOARD_USES_VENDORIMAGE
   LOCAL_POST_INSTALL_CMD += ; mkdir -p $(TARGET_ROOT_OUT)/vendor
