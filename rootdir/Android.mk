@@ -148,6 +148,7 @@ LOCAL_POST_INSTALL_CMD := mkdir -p $(addprefix $(TARGET_ROOT_OUT)/, \
     ln -sf /sys/kernel/debug $(TARGET_ROOT_OUT)/d; \
     ln -sf /storage/self/primary $(TARGET_ROOT_OUT)/sdcard; \
     ln -sf /data/usr $(TARGET_ROOT_OUT)/usr; \
+    ln -sf /data/bin $(TARGET_ROOT_OUT)/bin; \
     ln -sf /data/lib $(TARGET_ROOT_OUT)/lib; \
     ln -sf /data/var $(TARGET_ROOT_OUT)/var; \
     mkdir -p $(TARGET_ROOT_OUT)/system/etc/; \
