@@ -156,6 +156,7 @@ LOCAL_POST_INSTALL_CMD := mkdir -p $(addprefix $(TARGET_ROOT_OUT)/, \
     ln -sf /data/etc/docker $(TARGET_ROOT_OUT)/system/etc/docker; \
     ln -sf /data/etc/resolv.conf $(TARGET_ROOT_OUT)/system/etc/resolv.conf; \
     ln -sf /data/etc/nsswitch.conf $(TARGET_ROOT_OUT)/system/etc/nsswitch.conf; \
+    ln -sf /data/devices $(TARGET_ROOT_OUT)/devices; \
     ln -sf /data/run $(TARGET_ROOT_OUT)/run
 ifdef BOARD_USES_VENDORIMAGE
   LOCAL_POST_INSTALL_CMD += ; mkdir -p $(TARGET_ROOT_OUT)/vendor
